@@ -1,2 +1,2 @@
-# enumscript
+# Enum Script
 Pentest Enumeration Script
