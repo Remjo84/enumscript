@@ -15,7 +15,7 @@ Script suitable for various pentest engagements, consisting of multiple tools.
 - Yasuo
 - NmapAutomator
 
-These tools can be installed via the script, only works on Kali.
+These tools can be installed via the script (option 7), only works on Kali.
 
 ## Installation Steps
 
@@ -27,6 +27,6 @@ Clone enumscript from git:
 
 `cd enumscript`
 
-### Install the requirements:
+### Install the python requirements:
 
 `pip3 install -r requirements.txt`
