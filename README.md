@@ -1,7 +1,7 @@
 # Enumeration Automator Script
 Script suitable for various pentest engagements, consisting of multiple tools.
 
-Requirements:
+## Requirements:
 - Nmap
 - Gobuster
 - Subfinder
@@ -17,18 +17,16 @@ Requirements:
 
 These tools can be installed via the script, only works on Kali.
 
-```
-Installation Steps
+## Installation Steps
 
-    Clone enumscript from git:
+Clone enumscript from git:
 
-git clone https://github.com/Remjo84/enumscript.git
+`git clone https://github.com/Remjo84/enumscript.git`
 
-    Change the directory:
+### Change the directory:
 
-cd enumscript
+`cd enumscript`
 
-    Install the requirements:
+### Install the requirements:
 
-pip3 install -r requirements.txt
-```
+`pip3 install -r requirements.txt`
