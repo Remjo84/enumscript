@@ -15,10 +15,6 @@ import shutil
 import pyfiglet
 import webtech
 
-#global scan_type 
-#scan_type = 0
-domain_data = ""
-ip_data = ""
 
 def print_ascii_art():
     ascii_banner = pyfiglet.figlet_format("Recoil \n Enumeration \nScript")
