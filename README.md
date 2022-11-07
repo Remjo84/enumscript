@@ -1,6 +1,8 @@
 # Enumeration Automator Script
 Script suitable for various pentest engagements, consisting of multiple tools.
 
+
+
 ## Requirements:
 - Nmap
 - Gobuster
@@ -30,3 +32,9 @@ Clone enumscript from git:
 ### Install the python requirements:
 
 `pip3 install -r requirements.txt`
+
+## Usage
+
+`Python3 enumscript.py`
+
+![Enumscript](https://imgur.com/a/6sF5Ico)
