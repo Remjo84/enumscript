@@ -37,4 +37,4 @@ Clone enumscript from git:
 
 `Python3 enumscript.py`
 
-![Enumscript](https://i.imgur.com/ydUzL65.png)
+![Enumscript](https://i.imgur.com/C9IliAH.png)
