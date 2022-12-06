@@ -551,7 +551,8 @@ def install():
     #setup wig
     subprocess.run(shlex.split('git clone https://github.com/jekyc/wig.git'))
     os.chdir('wig/')
-    subprocess.run(shlex.split('python3 setup.py install')) 
+    subprocess.run(shlex.split('python3 setup.py install'))
+    os.chdir('../')
 
     #setup linkfinder
     subprocess.run(shlex.split('git clone https://github.com/GerbenJavado/LinkFinder.git')) 
