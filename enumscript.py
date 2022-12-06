@@ -570,6 +570,7 @@ def install():
     os.mkdir('nmapAutomator')
     os.chdir('nmapAutomator/')
     subprocess.run(shlex.split('wget https://raw.githubusercontent.com/21y4d/nmapAutomator/master/nmapAutomator.sh'))
+    subprocess.run(['chmod', '+x', 'nmapAutomator.sh'])
 
     splitter()
     print(f"\033[91mEverything is installed now!\033[0m")
