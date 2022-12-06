@@ -89,6 +89,7 @@ def input_passive_domain():
     parent_dir = "external_passive"
     path = os.path.join(parent_dir, domain)
     print(f'Working on gathering info on {domain}')
+    mkdir(path)
     external_passive(path,domain)
 
 def input_active_domain():
@@ -97,6 +98,7 @@ def input_active_domain():
     parent_dir = "external_active"
     path = os.path.join(parent_dir, domain)
     print(f'Working on gathering info on {domain}')
+    mkdir(path)
     external_active(path,domain)
 
 def input_active_domain_specific():
@@ -111,6 +113,8 @@ def input_active_domain_specific():
     path = os.path.join(parent_dir, project)
 
     print(f'Working on gathering domains from {file_input_domain} and {file_input_ip}')
+    
+    mkdir(path)
 
     #calling file combiner
     with open (file_input_domain) as fp:
@@ -136,6 +140,7 @@ def input_ip_single():
     path = os.path.join(parent_dir, ip)
     print(f'Working on gathering info on {ip}')
 
+    mkdir(path)
     internal_single(ip,path)
 
 def input_ip():
@@ -145,13 +150,13 @@ def input_ip():
     parent_dir = "internal"
     path = os.path.join(parent_dir, ip)
     print(f'Working on gathering info on {ip}/{subnetmask}')
-
+    
+    mkdir(path)
     internal(ip,subnetmask,path)
 
 # TEST TYPE CHOICES
 
 def external_passive(path,domain):
-    mkdir(path)
     scan_type = 1
     file_input_domain = ""
 
@@ -167,7 +172,6 @@ def external_passive(path,domain):
     print('\033[91m'+'Scan is completed'+'\033[0m')
 
 def external_active(path,domain):
-    mkdir(path)
     scan_type = 2
     file_input_domain = ""
     file_input_ip = ""
@@ -191,7 +195,6 @@ def external_active(path,domain):
     print('\033[91m'+'Scan is completed'+'\033[0m')
 
 def external_specific(domain,path,file_input_domain,file_input_ip):
-    mkdir(path)
     scan_type = 3
     ip = ""
     subnetmask = ""
@@ -211,7 +214,6 @@ def external_specific(domain,path,file_input_domain,file_input_ip):
     print('\033[91m'+'Scan is completed'+'\033[0m')
 
 def internal_single(ip,path):
-    mkdir(path)
     scan_type = 4
     domain = ip
     nmapautomator_fast = True
@@ -238,7 +240,6 @@ def internal_single(ip,path):
     nmapautomator(ip,path,nmapautomator_fast,nmapautomator_full,nmapautomator_vuln,nmapautomator_recon)
 
 def internal(ip,subnetmask,path):
-    mkdir(path)
     scan_type = 5
     file_input_domain = ""
     file_input_ip = ""
@@ -566,8 +567,8 @@ def install():
     subprocess.run(shlex.split('git clone https://github.com/0xsauby/yasuo.git'))
 
     #setup nmapAutomator
-    os.mkdir('nmapAutomator/')
-    os.chdir('nmapAutomator')
+    os.mkdir('nmapAutomator')
+    os.chdir('nmapAutomator/')
     subprocess.run(shlex.split('wget https://raw.githubusercontent.com/21y4d/nmapAutomator/master/nmapAutomator.sh'))
 
     splitter()
